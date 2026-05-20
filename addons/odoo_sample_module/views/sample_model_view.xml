@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <!-- BLOCK : Módulo de Exemplo -->
+
+        <!-- Search -->
+        <record id="view_search_odoo_sample_module_sample_model" model="ir.ui.view">
+            <field name="name">Módulo de Exemplo</field>
+            <field name="model">app.odoo_sample_module.sample_model</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="id"/>
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="user_id"/>
+                    <field name="company_id"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- List -->
+        <record id="view_list_odoo_sample_module_sample_model" model="ir.ui.view">
+            <field name="name">Módulo de Exemplo</field>
+            <field name="model">app.odoo_sample_module.sample_model</field>
+            <field name="arch" type="xml">
+                <list string="Módulo de Exemplo">
+                    <field name="id"/>
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="user_id"/>
+                    <field name="company_id"/>
+                    <field name="total"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form -->
+        <record id="view_form_odoo_sample_module_sample_model" model="ir.ui.view">
+            <field name="name">Módulo de Exemplo</field>
+            <field name="model">app.odoo_sample_module.sample_model</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_set_state_concluido"
+                            string="Concluir"
+                            class="btn-primary"
+                            type="object"
+                        />
+                        <button name="action_set_state_pendente"
+                            string="Pendente"
+                            class="btn-outline-secondary"
+                            type="object"
+                        />
+                        <button name="action_set_state_cancelado"
+                            string="Cancelar"
+                            class="btn-outline-secondary"
+                            type="object"
+                        />
+                        <field name="state" widget="statusbar" />
+                    </header>
+                    <sheet>
+                        <div class="oe_title mb-3">
+                            <div>
+                                <label for="name"/>
+                            </div>
+                            <h1>
+                                <field name="name" placeholder="Nome da Venda..." />
+                            </h1>
+                        </div>
+                        <group>
+                            <field name="descricao" />
+                        </group>
+                        <group>
+                            <group>
+                                <field name="partner_id" />
+                                <field name="user_id" />
+                                <field name="company_id" />
+                            </group>
+                            <group>
+                                <field name="data" />
+                                <field name="numero_inteiro" />
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="page_items" string="Itens">
+                                <field name="sample_item_model_ids">
+                                    <list editable="bottom">
+                                        <field name="descricao"/>
+                                        <field name="valor"/>
+                                        <field name="quantidade"/>
+                                        <field name="subtotal"/>
+                                    </list>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2">
+                                    <!-- <field name="valor" readonly="True" string="Valor" /> -->
+                                    <field name="total" class="oe_subtotal_footer_separator" readonly="True" string="Valor Total" />
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <!-- <field name="activity_ids"/> -->
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Actions -->
+        <record model="ir.actions.act_window" id="action_odoo_sample_module_sample_model">
+            <field name="name">Módulo de Exemplo</field>
+            <field name="res_model">app.odoo_sample_module.sample_model</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">list,form</field>
+            <field name="search_view_id" ref="view_search_odoo_sample_module_sample_model"/>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="limit">100</field>
+        </record>
+        <record id="action_odoo_sample_module_sample_model_list_view" model="ir.actions.act_window.view">
+            <field name="sequence" eval="0"/>
+            <field name="view_mode">list</field>
+            <field name="view_id" ref="view_list_odoo_sample_module_sample_model"/>
+            <field name="act_window_id" ref="action_odoo_sample_module_sample_model"/>
+        </record>
+        <record id="action_odoo_sample_module_sample_model_form_view" model="ir.actions.act_window.view">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_form_odoo_sample_module_sample_model"/>
+            <field name="act_window_id" ref="action_odoo_sample_module_sample_model"/>
+        </record>
+
+        <!-- END BLOCK : Módulo de Exemplo -->
+
+    </data>
+</odoo>

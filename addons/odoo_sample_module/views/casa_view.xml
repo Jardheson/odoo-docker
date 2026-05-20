@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+
+    <!-- list -->
+    <record id="view_tree_odoo_sample_module_casa" model="ir.ui.view">
+        <field name="name">Casa</field>
+        <field name="model">casa.model</field>
+        <field name="arch" type="xml">
+            <list string="Casa">
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form -->
+    <record id="view_form_odoo_sample_module_casa" model="ir.ui.view">
+        <field name="name">Casa</field>
+        <field name="model">casa.model</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Actions -->
+    <record model="ir.actions.act_window" id="action_odoo_sample_module_casa">
+        <field name="name">Casa</field>
+        <field name="res_model">casa.model</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    </data>
+</odoo>

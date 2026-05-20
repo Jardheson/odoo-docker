@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <!-- list -->
+        <record id="view_tree_perfil_valores" model="ir.ui.view">
+            <field name="name">Perfil Valores</field>
+            <field name="model">perfil.valores</field>
+            <field name="arch" type="xml">
+                <list string="Perfil Valores">
+                    <field name="ano_edital"/>
+                    <field name="codigo"/>
+                    <field name="valor"/>
+                    <field name="vigencia_inicial"/>
+                    <field name="vigencia_final"/>
+                    <field name="ativo"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form -->
+        <record id="view_form_perfil_valores" model="ir.ui.view">
+            <field name="name">Perfil Valores</field>
+            <field name="model">perfil.valores</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="ano_edital" />
+                                <field name="codigo" />
+                                <field name="valor" />
+                            </group>
+                            <group>
+                                <field name="vigencia_inicial" />
+                                <field name="vigencia_final" />
+                                <field name="ativo" />
+                            </group>
+                        </group>
+                        <group>
+                            <field name="descricao" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Actions -->
+        <record model="ir.actions.act_window" id="action_perfil_valores">
+            <field name="name">Perfil Valores</field>
+            <field name="res_model">perfil.valores</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <!-- Menu -->
+        <menuitem
+            id="menu_perfil_valores"
+            name="Perfil Valores"
+            parent="menu_forecast_parent"
+            action="action_perfil_valores"
+            sequence="20"
+        />
+
+    </data>
+</odoo>

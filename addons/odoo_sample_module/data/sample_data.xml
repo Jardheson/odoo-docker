@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- BLOCK : Cidades -->
+
+        <record id="1" model="res.city">
+            <field name="name">Alta Floresta D´oeste</field>
+            <field name="code_ibge">1100015</field>
+            <field name="state_id" search="[('country_id.code', '=', 'BR'), ('code', '=', 'RO')]" />
+        </record>
+
+        <!-- END BLOCK : Cidades -->
+
+    </data>
+</odoo>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="forecast_action" model="ir.actions.act_window">
+            <field name="name">Forecast</field>
+            <field name="res_model">forecast.forecast</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Nenhuma previsão criada ainda.
+                </p>
+                <p>
+                    Clique em "Novo" para criar a primeira previsão.
+                </p>
+            </field>
+        </record>
+
+        <menuitem
+            id="menu_forecast"
+            name="Forecast"
+            parent="menu_forecast_parent"
+            action="forecast_action"
+            sequence="1" />
+
+        <record id="forecast_tree_view" model="ir.ui.view">
+            <field name="name">Forecast - List View</field>
+            <field name="model">forecast.forecast</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="ano" />
+                    <field name="versao" />
+                    <field name="centro_responsabilidade_id" />
+                    <field name="cenario" />
+                    <field name="state" />
+                    <field name="created_at" />
+                </list>
+            </field>
+        </record>
+
+        <record id="forecast_form_view" model="ir.ui.view">
+            <field name="name">Forecast - Form View</field>
+            <field name="model">forecast.forecast</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field
+                                    name="ano"
+                                    class="oe_inline"
+                                    placeholder="2024" />
+                                -
+                                <field
+                                    name="versao"
+                                    class="oe_inline"
+                                    placeholder="v1.0" />
+                            </h1>
+                        </div>
+
+                        <group>
+                            <group string="Informações Gerais">
+                                <field name="ano" />
+                                <field name="versao" />
+                                <field name="centro_responsabilidade_id" />
+                                <field name="cenario" />
+                            </group>
+                            <group string="Status e Rastreamento">
+                                <field name="state" />
+                                <field name="created_at" />
+                                <field name="updated_at" />
+                            </group>
+                        </group>
+
+                        <group string="Descrição">
+                            <field name="descricao" nolabel="1" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="centro_responsabilidade_action" model="ir.actions.act_window">
+            <field name="name">Centro de Responsabilidade</field>
+            <field name="res_model">forecast.centro_responsabilidade</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Nenhum centro de responsabilidade criado ainda.
+                </p>
+                <p>
+                    Clique em "Novo" para criar o primeiro centro de responsabilidade.
+                </p>
+            </field>
+        </record>
+
+        <menuitem
+            id="centro_responsabilidade_menu"
+            name="Centro de Responsabilidade"
+            parent="menu_forecast_parent"
+            action="centro_responsabilidade_action"
+            sequence="2" />
+
+        <record id="centro_responsabilidade_tree_view" model="ir.ui.view">
+            <field name="name">Centro de Responsabilidade - List View</field>
+            <field name="model">forecast.centro_responsabilidade</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="codigo" />
+                    <field name="name" />
+                    <field name="ativo" />
+                </list>
+            </field>
+        </record>
+
+        <record id="centro_responsabilidade_form_view" model="ir.ui.view">
+            <field name="name">Centro de Responsabilidade - Form View</field>
+            <field name="model">forecast.centro_responsabilidade</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field
+                                    name="name"
+                                    class="oe_inline" />
+                            </h1>
+                        </div>
+
+                        <group>
+                            <group string="Informações">
+                                <field name="codigo" />
+                                <field name="name" />
+                                <field name="ativo" />
+                            </group>
+                        </group>
+
+                        <group string="Descrição">
+                            <field name="descricao" nolabel="1" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

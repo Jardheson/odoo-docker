@@ -1,3 +1,0 @@
-[submodule "addons/odoo_sample_module"]
-	path = addons/odoo_sample_module
-	url = https://github.com/Jardheson/odoo_sample_module.git

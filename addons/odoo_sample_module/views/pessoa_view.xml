@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+    <!-- list -->
+    <record id="view_tree_odoo_sample_module_pessoa" model="ir.ui.view">
+        <field name="name">Pessoa</field>
+        <field name="model">pessoa.model</field>
+        <field name="arch" type="xml">
+            <list string="Pessoa">
+                <field name="name"/>
+                <field name="cpf"/>
+                <field name="data_nascimento"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form -->
+    <record id="view_form_odoo_sample_module_pessoa" model="ir.ui.view">
+        <field name="name">Pessoa</field>
+        <field name="model">pessoa.model</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="cpf" />
+                            <field name="data_nascimento" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Actions -->
+    <record model="ir.actions.act_window" id="action_odoo_sample_module_pessoa">
+        <field name="name">Pessoa</field>
+        <field name="res_model">pessoa.model</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    </data>
+</odoo>
+
+

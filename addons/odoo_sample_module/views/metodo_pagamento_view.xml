@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <!-- BLOCK : Métodos de Pagamento -->
+
+        <!-- List -->
+        <record id="view_list_odoo_sample_module_metodo_pagamento" model="ir.ui.view">
+            <field name="name">Métodos de Pagamento</field>
+            <field name="model">app.odoo_sample_module.metodo_pagamento</field>
+            <field name="arch" type="xml">
+                <list string="Métodos de Pagamento">
+                    <field name="name"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form -->
+        <record id="view_form_odoo_sample_module_metodo_pagamento" model="ir.ui.view">
+            <field name="name">Métodos de Pagamento</field>
+            <field name="model">app.odoo_sample_module.metodo_pagamento</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Actions -->
+        <record model="ir.actions.act_window" id="action_odoo_sample_module_metodo_pagamento">
+            <field name="name">Métodos de Pagamento</field>
+            <field name="res_model">app.odoo_sample_module.metodo_pagamento</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">list,form</field>
+        </record>
+        <!-- <record id="action_odoo_sample_module_metodo_pagamento_list_view" model="ir.actions.act_window.view">
+            <field name="sequence" eval="0"/>
+            <field name="view_mode">list</field>
+            <field name="view_id" ref="view_list_odoo_sample_module_metodo_pagamento"/>
+            <field name="act_window_id" ref="action_odoo_sample_module_metodo_pagamento"/>
+        </record>
+        <record id="action_odoo_sample_module_metodo_pagamento_form_view" model="ir.actions.act_window.view">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_form_odoo_sample_module_metodo_pagamento"/>
+            <field name="act_window_id" ref="action_odoo_sample_module_metodo_pagamento"/>
+        </record> -->
+
+        <!-- END BLOCK : Métodos de Pagamento -->
+
+    </data>
+</odoo>

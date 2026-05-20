@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <!-- BLOCK : Groups -->
+
+        <!-- Perfil de Acesso ao Modulo de Exemplo -->
+        <record model="ir.module.category" id="module_category_odoo_module_sample">
+          <field name="name">Módulo de Exemplo</field>
+          <field name="description">Perfil de Acesso ao Modulo de Exemplo</field>
+          <field name="sequence">1</field>
+        </record>
+
+        <!-- Grupo de usuários de Gerencia de Vendas -->
+        <record id="group_odoo_sample_module_sale_manager" model="res.groups">
+            <field name="name">Gerente de Vendas</field>
+            <field name="category_id" ref="odoo_sample_module.module_category_odoo_module_sample"/>
+        </record>
+
+        <!-- END BLOCK : Groups -->
+
+    </data>
+</odoo>

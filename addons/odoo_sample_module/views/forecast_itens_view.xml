@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <!-- list -->
+        <record id="view_tree_forecast_itens" model="ir.ui.view">
+            <field name="name">Forecast Itens</field>
+            <field name="model">forecast.itens</field>
+            <field name="arch" type="xml">
+                <list string="Forecast Itens">
+                    <field name="forecast_id"/>
+                    <field name="name"/>
+                    <field name="perfil_id"/>
+                    <field name="pessoa_id"/>
+                    <field name="conta_id"/>
+                    <field name="total_ano"/>
+                    <field name="state"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form -->
+        <record id="view_form_forecast_itens" model="ir.ui.view">
+            <field name="name">Forecast Itens</field>
+            <field name="model">forecast.itens</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <field name="state" widget="statusbar" />
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="forecast_id" />
+                                <field name="name" />
+                                <field name="perfil_id" />
+                                <field name="pessoa_id" />
+                            </group>
+                            <group>
+                                <field name="conta_id" />
+                                <field name="casa_id" />
+                                <field name="unidade_organizacional_id" />
+                                <field name="centro_responsabilidade_id" />
+                            </group>
+                        </group>
+                        <group string="Cenário e Status">
+                            <group>
+                                <field name="cenario" />
+                            </group>
+                        </group>
+                        <group string="Valores Mensais">
+                            <group>
+                                <field name="valor_mes_01" />
+                                <field name="valor_mes_02" />
+                                <field name="valor_mes_03" />
+                                <field name="valor_mes_04" />
+                            </group>
+                            <group>
+                                <field name="valor_mes_05" />
+                                <field name="valor_mes_06" />
+                                <field name="valor_mes_07" />
+                                <field name="valor_mes_08" />
+                            </group>
+                            <group>
+                                <field name="valor_mes_09" />
+                                <field name="valor_mes_10" />
+                                <field name="valor_mes_11" />
+                                <field name="valor_mes_12" />
+                            </group>
+                        </group>
+                        <group>
+                            <field name="total_ano" />
+                        </group>
+                        <group string="Observações e Cálculos">
+                            <field name="memoria_calculo" />
+                            <field name="observacoes" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Actions -->
+        <record model="ir.actions.act_window" id="action_forecast_itens">
+            <field name="name">Forecast Itens</field>
+            <field name="res_model">forecast.itens</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <!-- Menu -->
+        <menuitem
+            id="menu_forecast_itens"
+            name="Forecast Itens"
+            parent="menu_forecast_parent"
+            action="action_forecast_itens"
+            sequence="30"
+        />
+
+    </data>
+</odoo>

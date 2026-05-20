@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_app_odoo_sample_module_get_started_model_group_user,Get Started - Grupo Usuário,model_app_odoo_sample_module_get_started_model,base.group_user,1,1,1,1
+access_app_odoo_sample_module_sample_model_group_user,Módulo de Exemplo - Grupo Usuário,model_app_odoo_sample_module_sample_model,base.group_user,1,1,1,1
+access_app_odoo_sample_module_sample_item_model_group_user,Item Módulo de Exemplo - Grupo Usuário,model_app_odoo_sample_module_sample_item_model,base.group_user,1,1,1,1
+access_app_odoo_sample_module_metodo_pagamento_group_user,Métodos de Pagamento - Grupo Usuário,model_app_odoo_sample_module_metodo_pagamento,base.group_user,1,1,1,1
+access_app_odoo_sample_module_perfil_group_user,Perfil - Grupo Usuário,model_perfil_model,base.group_user,1,1,1,1
+access_app_odoo_sample_module_perfil_valores_group_user,Perfil Valores - Grupo Usuário,model_perfil_valores,base.group_user,1,1,1,1
+access_app_odoo_sample_module_pessoa_group_user,Pessoa - Grupo Usuário,model_pessoa_model,base.group_user,1,1,1,1
+access_app_odoo_sample_module_casa_group_user,Casa - Grupo Usuário,model_casa_model,base.group_user,1,1,1,1
+access_app_odoo_sample_module_conta_group_user,Conta - Grupo Usuário,model_conta_model,base.group_user,1,1,1,1
+access_app_odoo_sample_module_unidade_organizacional_group_user,Unidade Organizacional - Grupo Usuário,model_unidade_organizacional_model,base.group_user,1,1,1,1
+access_forecast_forecast_group_user,Forecast - Grupo Usuário,model_forecast_forecast,base.group_user,1,1,1,1
+access_forecast_centro_responsabilidade_group_user,Centro de Responsabilidade - Grupo Usuário,model_forecast_centro_responsabilidade,base.group_user,1,1,1,1
+access_forecast_itens_group_user,Forecast Itens - Grupo Usuário,model_forecast_itens,base.group_user,1,1,1,1
