@@ -1,0 +1,19 @@
+{
+  "typeCheckingMode": "off",
+  "pythonVersion": "3.10",
+  "pythonPath": "${workspaceFolder}/.venv/bin/python",
+  "include": [
+    "addons"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/__pycache__",
+    ".venv",
+    "build",
+    "storage"
+  ],
+  "reportMissingImports": false,
+  "reportMissingTypeStubs": false,
+  "reportUnusedImport": false,
+  "reportUnusedVariable": false
+}

@@ -3,6 +3,17 @@
   "python.testing.pytestEnabled": true,
   "python.testing.pytestArgs": [],
   "python.testing.cwd": "/opt/odoo",
+  "[python]": {
+    "defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python"
+  },
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/addons"
+  ],
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.typeCheckingMode": "off",
+  "python.linting.pylintArgs": [
+    "--init-hook=import sys; sys.path.append('${workspaceFolder}')"
+  ],
   "files.watcherExclude": {
     "**/.venv/**": true,
     "**/__pycache__/**": true,
