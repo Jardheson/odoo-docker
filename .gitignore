@@ -153,3 +153,5 @@ storage/*
 docs/*
 !docs/.gitkeep
 *.orig
+# Modules to track
+!/addons/odoo_sample_module/
